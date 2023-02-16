@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DogManager", "DogManager\DogManager.csproj", "{2E2BE09C-CFED-4E38-9A76-25D681B5926A}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "DogManager.React", "DogManagerReact\DogManager.React.esproj", "{7910D2DF-9126-4119-80E3-D03721DE900F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E2BE09C-CFED-4E38-9A76-25D681B5926A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E2BE09C-CFED-4E38-9A76-25D681B5926A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E2BE09C-CFED-4E38-9A76-25D681B5926A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E2BE09C-CFED-4E38-9A76-25D681B5926A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7910D2DF-9126-4119-80E3-D03721DE900F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7910D2DF-9126-4119-80E3-D03721DE900F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7910D2DF-9126-4119-80E3-D03721DE900F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7910D2DF-9126-4119-80E3-D03721DE900F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7910D2DF-9126-4119-80E3-D03721DE900F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7910D2DF-9126-4119-80E3-D03721DE900F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7DC7EB5E-7A4A-406D-9FA2-098856E1FAF0}
+	EndGlobalSection
+EndGlobal

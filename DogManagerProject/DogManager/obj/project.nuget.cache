@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "ch1rY+uSsO4UDf1sc2ha5P0M26k4SfKt8+oSeUDmrAPcpqT4htWeph4F1MqUcLIA7iGqT6C1Uy7YrT7x6uEgTg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\DOM\\csharp\\Repos\\DogManagerApp\\DogManagerProject\\DogManager\\DogManager.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\DOM\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\DOM\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\DOM\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\DOM\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\DOM\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\DOM\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}

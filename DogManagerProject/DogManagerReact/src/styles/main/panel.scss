@@ -1,0 +1,14 @@
+@import 'mainVariables.scss';
+
+.panel {
+    background-color: white;
+    border: none;
+    border-radius: $baseRadius;
+    box-shadow: $boxShadow;
+    text-align: center;
+    padding: 25px;
+    margin: 10px auto;
+    width: 70%;
+    height: auto;
+    overflow-wrap:normal;
+}

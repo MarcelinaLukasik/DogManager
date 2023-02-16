@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+
+@import 'mainVariables.scss';
+
+container {
+  width: 100%;
+  display: inline-block;
+}
+  
+
+.nav {
+  overflow: hidden;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 19px;
+    
+  div {
+    display: inline;
+    font-family: $baseFont;
+    font-size: 19px;
+    margin: 10px;
+    border-radius: 20px;
+    a {
+      color: $baseTextColor;
+      text-decoration: none;
+      padding: 15px;
+      &:hover {
+        color:rgb(0, 0, 0);
+        background-color: $baseColor;
+        border-radius: $baseRadius;
+      }
+      background-color: rgb(255, 255, 255);
+    }
+      
+  }
+      
+}
+         
+
+.content {
+  text-align: center;
+  padding: 200px 20px 200px 20px;
+  height:auto;
+  width: auto;
+}
+
+
+body {
+    margin-bottom: 20px;
+    font-weight: 400;
+    overflow-x: hidden;
+    position: relative;
+    background-color: map-get($colorsPalette , "baseColor" ) !important;
+    color: $baseTextColor !important;
+    font-family: $baseFont !important;
+
+}
+
+button {
+  background-color: #ffffff;
+  color: $baseTextColor;
+  border: none;
+  border-radius: $baseRadius;
+  padding: 18px;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  &:hover {
+    background-color: $baseHoverColor;
+  }
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+ 
+  
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+ 
+
+
+
