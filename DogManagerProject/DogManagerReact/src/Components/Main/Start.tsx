@@ -51,7 +51,6 @@ const Start: React.FC = () => {
     function changeToNextBreed(){
         if (currentBreedNumber !== allBreeds.length -1){
             setCurrentBreedNumber(currentBreedNumber + 1);
-            // setBreed(allBreeds[currentBreedNumber ]);
             console.log(currentBreedNumber);
         }
         
@@ -60,7 +59,6 @@ const Start: React.FC = () => {
     function changeToPreviousBreed(){
         if (currentBreedNumber !== 0){
             setCurrentBreedNumber(currentBreedNumber - 1);
-            // setBreed(allBreeds[currentBreedNumber ]);
             console.log(currentBreedNumber);
         }     
     }
@@ -69,43 +67,65 @@ const Start: React.FC = () => {
         navigate("Details");
     }
 
+    function selectChange(event: React.ChangeEvent<HTMLSelectElement>){
+        const value = event.target.value;
+        const key = event.target.options.selectedIndex;
+        setBreed(value);
+        setCurrentBreedNumber(key -1);
+    }
+
 
     return (
         <div className='content'>
             <div className='panel'>
                 <h3>Let's get started!</h3>
-                <p>Choose your dog breed:</p>               
-                <div className='infoCard'>
-                    <div className='row'>
-                       
-                        <div className='col-2'>
-                            <div className="center-con">
-                                <div className="round" onClick={changeToPreviousBreed}>
-                                    <div id="cta">
-                                        <div id='previous'>
-                                            <span className="arrow first next "></span>
-                                            <span className="arrow second next "></span>
+                <p>Choose your dog breed:</p>  
+                <div className='row'>
+                    <div className='col-6'>
+                        <div className='infoCard'>
+                            <div className='row'>                           
+                                <div className='col-2'>
+                                    <div className="center-con">
+                                        <div className="round" onClick={changeToPreviousBreed}>
+                                            <div id="cta">
+                                                <div id='previous'>
+                                                    <span className="arrow first next "></span>
+                                                    <span className="arrow second next "></span>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </div>  
                                 </div>
-                            </div>  
-                        </div>
-                        <div  className='col-8'>
-                                <img src={imageUrl} alt="dog"/>
-                                <p>{breed ? breed.toUpperCase() : 'affenpinscher'}</p>
-                        </div>
-                        <div className='col-2'>
-                            <div className="center-con">
-                                <div className="round" onClick={changeToNextBreed}>                                   
-                                    <div id="cta" >
-                                        <span className="arrow first next "></span>
-                                        <span className="arrow second next "></span>
-                                    </div>                                                                    
+                                <div  className='col-8'>
+                                        <img src={imageUrl} alt="dog"/>
+                                        <p>{breed ? breed.toUpperCase() : 'affenpinscher'}</p>
                                 </div>
-                            </div>  
-                        </div>
+                                <div className='col-2'>
+                                    <div className="center-con">
+                                        <div className="round" onClick={changeToNextBreed}>                                   
+                                            <div id="cta" >
+                                                <span className="arrow first next "></span>
+                                                <span className="arrow second next "></span>
+                                            </div>                                                                    
+                                        </div>
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>  
                     </div>
-                </div>  
+                    <div className='col-6'>
+                        <p>Or choose from list below:</p>
+                        <select onChange={selectChange}>
+                            <option value="">Select</option>
+                            {allBreeds.map((item, index) => (
+                                <option key={index} value={item} >
+                                {item}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                </div>             
+               
                 <button onClick={goToDetails}>Next</button>                  
             </div>                
         </div>

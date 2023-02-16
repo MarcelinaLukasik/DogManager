@@ -23,3 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 .vs
+/DogManagerProject/DogManager/bin/Debug/net6.0
+/DogManagerProject/DogManager/obj
