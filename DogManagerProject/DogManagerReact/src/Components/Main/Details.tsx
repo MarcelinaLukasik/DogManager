@@ -1,6 +1,6 @@
 import '../../styles/main/layout.css';
 import { useLocation, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { IDogData } from '../Interfaces/IDogData';
 
 
