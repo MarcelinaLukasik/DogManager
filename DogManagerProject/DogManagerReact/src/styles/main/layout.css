@@ -125,4 +125,30 @@ button:hover {
   width: 100%;
 }
 
+.form {
+  display:grid;
+  grid-template-columns: 80px 200px;
+  grid-gap:15px;
+  justify-content: center;
+}
+
+.form label {
+  text-align: center;
+  color: #ee8f00;
+  font-weight: bolder;
+  font-size: 22px; 
+}
+
+.form input:focus {
+  outline-color: #f8a932;
+ 
+}
+
+.form input {
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ececec;
+}
+
 /*# sourceMappingURL=layout.css.map */
