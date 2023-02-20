@@ -4,7 +4,6 @@ import { useState } from "react";
 import { IDogData } from '../Interfaces/IDogData';
 
 
-
 const Details: React.FC = () => {
     const location = useLocation();
     const navigate = useNavigate();
@@ -37,16 +36,16 @@ const Details: React.FC = () => {
                     <div className='row'>
                         <div className='col-12 form'>
                             <label htmlFor="name">Name</label>
-                            <input id="name" value={dogData.name} name={"name"} onChange={handleChange}/>
+                            <input id="name" value={dogData.name} name={"name"} required onChange={handleChange}/>
 
                             <label htmlFor="age">Age</label>
-                            <input id="age" value={dogData.age} name={"age"} onChange={handleChange}/>
+                            <input id="age" value={dogData.age} name={"age"} required onChange={handleChange}/>
 
                             <label htmlFor="gender">Gender</label>
-                            <input id="gender" value={dogData.gender} name={"gender"} onChange={handleChange}/>
+                            <input id="gender" value={dogData.gender} name={"gender"} required onChange={handleChange}/>
 
                             <label htmlFor="weight">Weight</label>
-                            <input id="weight" value={dogData.weight} name={"weight"} onChange={handleChange}/>
+                            <input id="weight" value={dogData.weight} name={"weight"}  required onChange={handleChange}/>
                         </div>                      
                     </div>
                     <div className='row'>

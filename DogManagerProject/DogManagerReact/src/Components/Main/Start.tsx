@@ -5,8 +5,6 @@ import { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import InfoCard from './InfoCard';
 
-
-
 const Start: React.FC = () => {
     const [imageUrl, setImageUrl] = useState<string>("");
     const [breed, setBreed] = useState<string>("");
@@ -20,7 +18,6 @@ const Start: React.FC = () => {
             previousArrow.style.transform = 'scale(-1, 1)';
         }
         fetchDogBreeds(); 
-        // fetchDogList();
     }, []);
 
     useEffect(() => {
@@ -31,7 +28,6 @@ const Start: React.FC = () => {
     useEffect(() => {
         setBreed(allBreeds[currentBreedNumber ]);
      }, [currentBreedNumber]);
-  
     
     async function fetchDogBreeds() {
         const res = await fetch(`https://dog.ceo/api/breeds/list/all`);        
@@ -45,19 +41,10 @@ const Start: React.FC = () => {
         res.json().then(res => {setImageUrl(res.message);});             
       } 
 
-    // async function fetchDogList() {
-    //     const res = await fetch(`https://dogapi.dog/api/v2/breeds?page[number]=2`);           
-    //     res.json().then(res => {console.log(res.data[0].attributes.name)});             
-    //   } 
-      
-    //   https://dogapi.dog/api/v2/breeds
-
-
     function changeToNextBreed() : void{
         if (currentBreedNumber !== allBreeds.length -1){
             setCurrentBreedNumber(currentBreedNumber + 1);
-        }
-        
+        }        
     }
 
     function changeToPreviousBreed() : void{

@@ -10,5 +10,7 @@
   <ItemGroup>
     <Folder Include="src\Components\Manager\" />
     <Folder Include="src\Components\Interfaces\" />
+    <Folder Include="src\Enums\" />
+    <Folder Include="src\styles\manager\" />
   </ItemGroup>
 </Project>
