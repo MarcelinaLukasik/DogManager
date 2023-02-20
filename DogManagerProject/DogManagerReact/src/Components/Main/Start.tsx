@@ -1,18 +1,14 @@
 import '../../styles/main/layout.css';
 import '../../styles/main/panel.css';
 import '../../styles/main/slider.css';
-import '../../styles/main/arrow.css';
-import '../../styles/main/infoCard.css';
 import { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
-
-
+import InfoCard from './InfoCard';
 
 const Start: React.FC = () => {
     const [imageUrl, setImageUrl] = useState<string>("");
     const [breed, setBreed] = useState<string>("");
     const [allBreeds, setAllBreeds] = useState<Array<string>>([]);
-    // let currentBreedNumber: number = 0;
     const [currentBreedNumber, setCurrentBreedNumber] = useState<number>(1);
     const navigate = useNavigate();
 
@@ -32,11 +28,9 @@ const Start: React.FC = () => {
     useEffect(() => {
         setBreed(allBreeds[currentBreedNumber ]);
      }, [currentBreedNumber]);
-  
     
     async function fetchDogBreeds() {
-        const res = await fetch(`https://dog.ceo/api/breeds/list/all`); 
-        // const res = await fetch(`https://api.thecatapi.com/v1/images/search?size=full`);            
+        const res = await fetch(`https://dog.ceo/api/breeds/list/all`);        
         res.json().then(res => {
             setAllBreeds(Object.keys(res.message));
         });             
@@ -45,26 +39,22 @@ const Start: React.FC = () => {
     async function fetchDogImage() {
         const res = await fetch(`https://dog.ceo/api/breed/${breed ? breed : 'affenpinscher'}/images/random/1`);           
         res.json().then(res => {setImageUrl(res.message);});             
-      }  
+      } 
 
-
-    function changeToNextBreed(){
+    function changeToNextBreed() : void{
         if (currentBreedNumber !== allBreeds.length -1){
             setCurrentBreedNumber(currentBreedNumber + 1);
-            console.log(currentBreedNumber);
-        }
-        
+        }        
     }
 
-    function changeToPreviousBreed(){
+    function changeToPreviousBreed() : void{
         if (currentBreedNumber !== 0){
             setCurrentBreedNumber(currentBreedNumber - 1);
-            console.log(currentBreedNumber);
         }     
     }
 
     function goToDetails(){
-        navigate("Details");
+        navigate("Details", { state: {breed: breed, imageUrl: imageUrl}});
     }
 
     function selectChange(event: React.ChangeEvent<HTMLSelectElement>){
@@ -82,36 +72,8 @@ const Start: React.FC = () => {
                 <p>Choose your dog breed:</p>  
                 <div className='row'>
                     <div className='col-6'>
-                        <div className='infoCard'>
-                            <div className='row'>                           
-                                <div className='col-2'>
-                                    <div className="center-con">
-                                        <div className="round" onClick={changeToPreviousBreed}>
-                                            <div id="cta">
-                                                <div id='previous'>
-                                                    <span className="arrow first next "></span>
-                                                    <span className="arrow second next "></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>  
-                                </div>
-                                <div  className='col-8'>
-                                        <img src={imageUrl} alt="dog"/>
-                                        <p>{breed ? breed.toUpperCase() : 'affenpinscher'}</p>
-                                </div>
-                                <div className='col-2'>
-                                    <div className="center-con">
-                                        <div className="round" onClick={changeToNextBreed}>                                   
-                                            <div id="cta" >
-                                                <span className="arrow first next "></span>
-                                                <span className="arrow second next "></span>
-                                            </div>                                                                    
-                                        </div>
-                                    </div>  
-                                </div>
-                            </div>
-                        </div>  
+                         <InfoCard info={{breed, imageUrl}} functions={{changeToNextBreed,
+                         changeToPreviousBreed}}/>
                     </div>
                     <div className='col-6'>
                         <p>Or choose from list below:</p>
