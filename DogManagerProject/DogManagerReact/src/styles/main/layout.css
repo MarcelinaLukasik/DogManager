@@ -39,6 +39,7 @@ container {
 }
 
 body {
+  overflow-y: hidden;
   margin-bottom: 20px;
   font-weight: 400;
   overflow-x: hidden;
@@ -149,6 +150,33 @@ button:hover {
   border-radius: 5px;
   border: none;
   background-color: #ececec;
+}
+
+.scrollable-list {
+  margin: auto;
+  max-height: 200px;
+  width: 350px;
+  overflow-y: scroll;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255, 255, 255) rgb(255, 186, 57);
+}
+
+*::-webkit-scrollbar {
+  width: 20px;
+  
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 20px;
+  background: rgb(255, 255, 255);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 186, 57);
+  border-radius: 5px;
+  border: none;
 }
 
 /*# sourceMappingURL=layout.css.map */
