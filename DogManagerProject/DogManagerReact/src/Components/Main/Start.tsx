@@ -26,7 +26,7 @@ const Start: React.FC = () => {
 
     
     useEffect(() => {
-        setBreed(allBreeds[currentBreedNumber ]);
+        setBreed(allBreeds[currentBreedNumber]);
      }, [currentBreedNumber]);
     
     async function fetchDogBreeds() {
@@ -54,7 +54,7 @@ const Start: React.FC = () => {
     }
 
     function goToDetails(){
-        navigate("Details", { state: {breed: breed, imageUrl: imageUrl}});
+        navigate("Details", { state: {breed: breed? breed : 'affenpinscher', imageUrl: imageUrl}});
     }
 
     function selectChange(event: React.ChangeEvent<HTMLSelectElement>){

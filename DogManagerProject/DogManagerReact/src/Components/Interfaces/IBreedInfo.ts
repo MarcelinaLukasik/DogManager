@@ -1,4 +1,4 @@
-export interface BreedInfo  {
+export interface IBreedInfo  {
     id: string,
     attributes:{
         name: string,
