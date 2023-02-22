@@ -2,6 +2,8 @@ import '../../styles/main/banner.css';
 import '../../styles/main/layout.css';
 import { Link } from "react-router-dom";
 import Nav from 'react-bootstrap/Nav';
+import frontViewDogImage from  '../../images/frontViewDog.jpg';
+// import HomeImage from '../images/front-view-beautiful-dog-with-copy-space.jpg';
 
 const Banner: React.FC = () => {
     return (
@@ -9,15 +11,18 @@ const Banner: React.FC = () => {
         <div className='row'>
         <div className='col-1'>       
         </div>
-        <div className='col-5'>
-        <h2>Welcome!</h2>
-        <p className='div2'>DogManager is here to help you keep track with all your pet needs!
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
-        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
-        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-         deserunt mollit anim id est laborum."
-        </p>
+        <div className='col-6'>
+        <div className='banner-message'>
+            <h1>Welcome!</h1>
+            <h3>DogManager is here to help you keep track with all your pet needs!</h3>
+
+            <p>Keep all your pet informations in one place. 
+                 DogManager will help you with shedules and daily routine.                     
+                 You'll find behavioural advice, dog life-hacks, tips and tricks, 
+                 learn about different dog breeds and so much more. Let's get started!              
+            </p>
+               
+        </div>
         <Nav.Link as={Link} to="/getStarted">
             <button >START</button>
         </Nav.Link>
@@ -25,7 +30,7 @@ const Banner: React.FC = () => {
            
         <div className='col-5'>
             <p>
-            image here
+            <img className="banner-image" src={frontViewDogImage} alt="frontViewDogImage"/>
             </p>
             
         </div>

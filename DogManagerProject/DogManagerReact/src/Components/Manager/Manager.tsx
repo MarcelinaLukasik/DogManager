@@ -5,11 +5,15 @@ import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { BasicInfo } from '../../Enums/Notifications';
 import { IBreedInfo } from '../Interfaces/IBreedInfo';
+import DogInfo from './DogInfo';
+import { IDogData } from '../Interfaces/IDogData';
+import BreedInfo from './BreedInfo';
+import SimilarBreeds from './SimilarBreeds';
 
 
 const Manager: React.FC = () => {
     const location = useLocation();
-    let dogInfo = location.state; 
+    let dogInfo: IDogData = location.state; 
     let breedFound: boolean = false;
     const [dogFact, setDogFact] = useState<string> ("");
     const [allBreedsInfo, setAllBreedsInfo] = useState<Array<any>> ([]);
@@ -48,8 +52,7 @@ const Manager: React.FC = () => {
     }                     
 
     function GetBreedInfo(){
-        if(dogInfo && !breedFound){
-           
+        if(dogInfo && !breedFound){       
             allBreedsInfo.forEach((breed) => {
                 if(breed.attributes.name.toLowerCase() === dogInfo.breed){
                     setBreedInfo(breed);
@@ -59,7 +62,7 @@ const Manager: React.FC = () => {
         }      
     }
 
-    function GetSimiliarBreeds() {
+    function GetSimiliarBreeds(){
         if(dogInfo){         
             allBreedsInfo.forEach((breed) => {              
                 if(breed.attributes.name.toLowerCase().includes(dogInfo.breed.toLowerCase()) 
@@ -75,61 +78,32 @@ const Manager: React.FC = () => {
         <div className='content'>
             <h2>Your dog info:</h2>
             <div className="wrapper">
-                <div className="item1">
+                <div className="item-1">                
                     {breedInfo && 
-                    <div>
-                        <h3>Breed name:</h3>
-                        <p>{breedInfo.attributes.name}</p>
-                        <h3>Description:</h3>
-                        <p>{breedInfo.attributes.description}</p>
-                        <h3>Hypoallergenic:</h3>
-                        {breedInfo.attributes.hypoallergenic && 
-                        <p>Yes</p>
-                        }
-                        {!breedInfo.attributes.hypoallergenic && 
-                        <p>No</p>
-                        }
-                        
-                    </div>}
+                     <BreedInfo id={breedInfo.id} attributes={breedInfo.attributes}/>
+                    }
                     {!breedInfo &&
                     <p>{BasicInfo.BreedInfoNotFound}</p>
                     }
+
                     <h3>Similar dog breeds:</h3>
-                    {similarBreeds.length !== 0 &&
-                        <div className='scrollable-list'>
-                            
-                        {Array.from(new Set(similarBreeds)).map((item, index) => (
-                            <p key={index} >
-                            {item.attributes.name}
-                            </p>
-                        ))}
-                        </div>
-                    }
-                    {similarBreeds.length === 0 &&
-                        <p>{BasicInfo.NoResults}</p>
-                    }
+                    <SimilarBreeds similarBreeds={similarBreeds}/>
+
                 </div>
-                <div className="item2">
+                <div className="item-2">
                     {dogInfo &&
                         <img src={dogInfo.imageUrl} alt="dog"/>
                     }          
                 </div>
-                <div className="item3">
+                <div className="item-3">
                     <h3>Fun facts</h3>
                     <p>{dogFact}</p>
                     <button onClick={fetchDogFact}>Another one!</button>
                 </div>
-                <div className="item4">
+                <div className="item-4">
                     {dogInfo && <div className='row'>
-                        <h3>Dog info</h3>
-                        <div className='col-6'>
-                        <p>Name: {dogInfo.name}</p>
-                        <p>Age: {dogInfo.age}</p>
-                        </div>
-                        <div className='col-6'>
-                        <p>Gender: {dogInfo.gender}</p>
-                        <p>Weight: {dogInfo.weight}</p>
-                        </div>                   
+                        <DogInfo name={dogInfo.name} age={dogInfo.age} 
+                        breed={dogInfo.breed} gender={dogInfo.gender} weight={dogInfo.weight}/>                  
                     </div>
                     }
                     {!dogInfo &&        

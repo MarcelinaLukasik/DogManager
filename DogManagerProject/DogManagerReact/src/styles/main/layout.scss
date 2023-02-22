@@ -41,7 +41,7 @@ container {
 
 .content {
   text-align: center;
-  padding: 200px 20px 200px 20px;
+  padding: 120px 20px 200px 20px;
   height:auto;
   width: auto;
 }
@@ -50,7 +50,7 @@ container {
 body {
     margin-bottom: 20px;
     font-weight: 400;
-    overflow-x: hidden;
+    overflow-y: scroll;
     position: relative;
     background-color: map-get($colorsPalette , "baseColor" ) !important;
     color: $baseTextColor !important;
@@ -103,6 +103,59 @@ button {
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
+
+.form {
+  display:grid;
+  grid-template-columns: 80px 200px;
+  grid-gap:15px;
+  justify-content: center;
+}
+
+.form label {
+  text-align: center;
+  color: #ee8f00;
+  font-weight: bolder;
+  font-size: 22px; 
+}
+
+.form input:focus {
+  outline-color: #f8a932;
+ 
+}
+
+.form input {
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ececec;
+}
+
+.scrollable-list {
+  margin: auto;
+  max-height: 200px;
+  width: 350px;
+  overflow-y: scroll;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255, 255, 255) rgb(77, 77, 77);
+}
+
+*::-webkit-scrollbar {
+  width: 15px;
+  
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 20px;
+  background: rgb(255, 255, 255);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(77, 77, 77);
+  border-radius: 5px;
+  border: none;
+}
 
  
 

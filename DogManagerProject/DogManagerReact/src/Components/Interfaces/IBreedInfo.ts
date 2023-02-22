@@ -6,3 +6,7 @@ export interface IBreedInfo  {
         description: string
     }   
 }
+
+export interface ISimilarBreeds {
+    similarBreeds: IBreedInfo[]
+}

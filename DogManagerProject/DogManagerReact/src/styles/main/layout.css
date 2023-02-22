@@ -27,24 +27,23 @@ container {
 }
 .nav div a:hover {
   color: rgb(0, 0, 0);
-  background-color: #f7ce36;
+  background-color: #ffc432;
   border-radius: 20px;
 }
 
 .content {
   text-align: center;
-  padding: 100px 20px 100px 20px;
+  padding: 120px 20px 200px 20px;
   height: auto;
   width: auto;
 }
 
 body {
-  overflow-y: hidden;
   margin-bottom: 20px;
   font-weight: 400;
-  overflow-x: hidden;
+  overflow-y: scroll;
   position: relative;
-  background-color: #f7ce36 !important;
+  background-color: #ffc432 !important;
   color: #241e1e !important;
   font-family: "Fira Sans", sans-serif !important;
 }
@@ -127,9 +126,9 @@ button:hover {
 }
 
 .form {
-  display:grid;
+  display: grid;
   grid-template-columns: 80px 200px;
-  grid-gap:15px;
+  grid-gap: 15px;
   justify-content: center;
 }
 
@@ -137,12 +136,11 @@ button:hover {
   text-align: center;
   color: #ee8f00;
   font-weight: bolder;
-  font-size: 22px; 
+  font-size: 22px;
 }
 
 .form input:focus {
   outline-color: #f8a932;
- 
 }
 
 .form input {
@@ -160,12 +158,11 @@ button:hover {
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   scrollbar-width: thin;
-  scrollbar-color: rgb(255, 255, 255) rgb(255, 186, 57);
+  scrollbar-color: rgb(255, 255, 255) rgb(77, 77, 77);
 }
 
 *::-webkit-scrollbar {
-  width: 20px;
-  
+  width: 15px;
 }
 
 *::-webkit-scrollbar-track {
@@ -174,9 +171,9 @@ button:hover {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: rgb(255, 186, 57);
+  background-color: rgb(77, 77, 77);
   border-radius: 5px;
   border: none;
 }
 
-/*# sourceMappingURL=layout.css.map */
+/*# sourceMappingURL=Layout.css.map */
