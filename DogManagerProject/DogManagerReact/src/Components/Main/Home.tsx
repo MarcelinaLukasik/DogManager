@@ -4,9 +4,7 @@ import Banner from './Banner';
 const Home: React.FC = () => {
     return (
         <div>
-        <Banner/>
-        
-        
+          <Banner/>       
         </div>
     );
 };
