@@ -3,7 +3,6 @@ import '../../styles/main/arrow.css';
 import '../../styles/main/infoCard.css';
 import { IBreedUtils } from '../Interfaces/IBreedUtils';
 
-// type intersectedInterfaces = IBreedInfo & IBreedFunctions;
 const InfoCard: React.FC<IBreedUtils> = (props) => {
     return (
         <div className='infoCard'>
