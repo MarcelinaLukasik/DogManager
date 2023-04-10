@@ -29,30 +29,21 @@ const Layout: React.FC = () => {
 
     const onUpdateActiveLink = (link : string) => {
         setActiveLink(link);
-        console.log(link);
     }
 
     return (
         <div>
       <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
         <Container>
-          {/* <Navbar.Brand as={Link} to="/"> nowEvent */}
-            {/* <img src={""} alt="NowEvent" /> */}
-          {/* </Navbar.Brand> */}
-          {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
           <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="nav">
-                {/* <li> */}
+                <Nav className="nav">             
                 <div>
                     <Nav.Link as={Link} to="/" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'}
                             onClick={() => onUpdateActiveLink('home')}>DogManager
-                    </Nav.Link>                             
-                    {/* </li>   */}
-                    {/* <li> */}
+                    </Nav.Link>                                            
                     <Nav.Link as={Link} to="/" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'}
                         onClick={() => onUpdateActiveLink('home')}>Home
-                    </Nav.Link>
-                    {/* </li> */}
+                    </Nav.Link>                   
                     <Nav.Link as={Link} to="/manager" className={activeLink === 'manager' ? 'active navbar-link' : 'navbar-link'} 
                         onClick={() => onUpdateActiveLink('manager')}>Manager
                     </Nav.Link>
@@ -63,8 +54,7 @@ const Layout: React.FC = () => {
                             onClick={() => onUpdateActiveLink('about')}>About
                     </Nav.Link>
                 </div>                      
-                </Nav> 
-                 
+                </Nav>               
           </Navbar.Collapse>
         </Container>
       </Navbar>
