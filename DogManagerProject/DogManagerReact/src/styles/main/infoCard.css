@@ -1,17 +1,16 @@
 .infoCard {
-    background-color: white;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    width: 600px;
-    text-align: center;
-    padding: 25px;
-    margin: 10px auto;
-    height: auto;
-    overflow-wrap: normal;
-    
-  }
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 600px;
+  text-align: center;
+  padding: 25px;
+  margin: 10px auto;
+  height: auto;
+  overflow-wrap: normal;
+}
 
-  .infoCard img {
-      width: 300px;
-  }
+.infoCard img {
+  width: 300px;
+}
