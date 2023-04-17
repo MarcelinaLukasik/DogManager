@@ -1,6 +1,5 @@
 import "../../styles/main/layout.css";
 import "../../styles/main/panel.css";
-import "../../styles/main/slider.css";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import InfoCard from "./InfoCard";
