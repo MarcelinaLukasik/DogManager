@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans");
 
-@import "mainVariables.scss";
+@import 'mainVariables.scss';
 
 container {
   width: 100%;
   display: inline-block;
 }
+  
 
 .nav {
   overflow: hidden;
@@ -14,7 +15,7 @@ container {
   top: 0;
   width: 100%;
   padding: 19px;
-
+    
   div {
     display: inline;
     font-family: $baseFont;
@@ -26,30 +27,35 @@ container {
       text-decoration: none;
       padding: 15px;
       &:hover {
-        color: rgb(0, 0, 0);
+        color:rgb(0, 0, 0);
         background-color: $baseColor;
         border-radius: $baseRadius;
       }
       background-color: rgb(255, 255, 255);
     }
+      
   }
+      
 }
+         
 
 .content {
   text-align: center;
-  padding: 200px 20px 200px 20px;
-  height: auto;
+  padding: 120px 20px 200px 20px;
+  height:auto;
   width: auto;
 }
 
+
 body {
-  margin-bottom: 20px;
-  font-weight: 400;
-  overflow-x: hidden;
-  position: relative;
-  background-color: map-get($colorsPalette, "baseColor") !important;
-  color: $baseTextColor !important;
-  font-family: $baseFont !important;
+    margin-bottom: 20px;
+    font-weight: 400;
+    overflow-y: scroll;
+    position: relative;
+    background-color: map-get($colorsPalette , "baseColor" ) !important;
+    color: $baseTextColor !important;
+    font-family: $baseFont !important;
+
 }
 
 button {
@@ -66,6 +72,7 @@ button {
   }
 }
 
+
 * {
   box-sizing: border-box;
 }
@@ -74,46 +81,83 @@ button {
   content: "";
   clear: both;
   display: table;
+ 
+  
 }
 
 [class*="col-"] {
   float: left;
   padding: 15px;
+  
 }
 
-.col-1 {
-  width: 8.33%;
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.form {
+  display:grid;
+  grid-template-columns: 80px 200px;
+  grid-gap:15px;
+  justify-content: center;
 }
-.col-2 {
-  width: 16.66%;
+
+.form label {
+  text-align: center;
+  color: #ee8f00;
+  font-weight: bolder;
+  font-size: 22px; 
 }
-.col-3 {
-  width: 25%;
+
+.form input:focus {
+  outline-color: #f8a932;
+ 
 }
-.col-4 {
-  width: 33.33%;
+
+.form input {
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ececec;
 }
-.col-5 {
-  width: 41.66%;
+
+.scrollable-list {
+  margin: auto;
+  max-height: 200px;
+  width: 350px;
+  overflow-y: scroll;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255, 255, 255) rgb(77, 77, 77);
 }
-.col-6 {
-  width: 50%;
+
+*::-webkit-scrollbar {
+  width: 15px;
+  
 }
-.col-7 {
-  width: 58.33%;
+
+*::-webkit-scrollbar-track {
+  border-radius: 20px;
+  background: rgb(255, 255, 255);
 }
-.col-8 {
-  width: 66.66%;
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(77, 77, 77);
+  border-radius: 5px;
+  border: none;
 }
-.col-9 {
-  width: 75%;
-}
-.col-10 {
-  width: 83.33%;
-}
-.col-11 {
-  width: 91.66%;
-}
-.col-12 {
-  width: 100%;
-}
+
+ 
+
+
+

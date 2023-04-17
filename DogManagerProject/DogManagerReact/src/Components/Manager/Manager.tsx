@@ -3,18 +3,22 @@ import "../../styles/main/layout.css";
 import "../../styles/manager/wrapper.css";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { BasicInfo } from "../../Enums/Notifications";
-import { IBreedInfo } from "../Interfaces/IBreedInfo";
+import { BasicInfo } from '../../Enums/Notifications';
+import { IBreedInfo } from '../Interfaces/IBreedInfo';
+import DogInfo from './DogInfo';
+import { IDogData } from '../Interfaces/IDogData';
+import BreedInfo from './BreedInfo';
+import SimilarBreeds from './SimilarBreeds';
 
 const Manager: React.FC = () => {
-  const location = useLocation();
-  let dogInfo = location.state;
-  let breedFound: boolean = false;
-  const [dogFact, setDogFact] = useState<string>("");
-  const [allBreedsInfo, setAllBreedsInfo] = useState<Array<any>>([]);
-  const [breedInfo, setBreedInfo] = useState<IBreedInfo>();
-  const [similarBreeds, setSimilarBreeds] = useState<Array<IBreedInfo>>([]);
-  const [link, setLink] = useState<string>("https://dogapi.dog/api/v2/breeds");
+    const location = useLocation();
+    let dogInfo: IDogData = location.state; 
+    let breedFound: boolean = false;
+    const [dogFact, setDogFact] = useState<string> ("");
+    const [allBreedsInfo, setAllBreedsInfo] = useState<Array<any>> ([]);
+    const [breedInfo, setBreedInfo] = useState<IBreedInfo> ();
+    const [similarBreeds, setSimilarBreeds] = useState<Array<IBreedInfo>> ([]);
+    const [link, setLink] = useState<string> ("https://dogapi.dog/api/v2/breeds");
 
   useEffect(() => {
     fetchDogFact();

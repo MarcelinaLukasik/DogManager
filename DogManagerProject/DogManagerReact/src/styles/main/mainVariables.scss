@@ -1,11 +1,12 @@
-$baseColor: #f7ce36;
+
+$baseColor: #ffc432;
 $baseTextColor: #241e1e;
-$baseHoverColor: #f1f1f1;
+$baseHoverColor:#f1f1f1;
 
 $colorsPalette: (
-  "baseColor": $baseColor,
-  "baseTextColor": $baseTextColor,
-  "baseHoverColor": $baseHoverColor,
+    "baseColor": $baseColor,
+    "baseTextColor": $baseTextColor,
+    "baseHoverColor": $baseHoverColor
 );
 
 $baseFont: "Fira Sans", sans-serif;

@@ -1,37 +1,50 @@
 @media (min-width: 500px) {
-  .wrapper {
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(500px, 1fr));
-    height: 700px;
-    gap: 10px;
-    grid-template-areas:
-      "a a b"
-      "a a b"
-      "a a b"
-      "c d d";
+    .wrapper {
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(500px, 1fr));
+        height: 700px;
+        gap: 10px;
+        grid-template-areas:
+          "a a b"
+          "a a b"
+          "a a b"
+          "c d d";       
+      }
   }
-}
 
 .wrapper img {
-  width: 400px;
-  margin-top: 25px;
+    max-width: 500px;
+    max-height: 500px;
+    
 }
 
-.item1 {
-  grid-area: a;
-  background-color: rgb(253, 214, 70);
+[class*=item-] {
+    
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 1);
+    background-image: linear-gradient(152deg, rgba(255, 255, 255, 1) 0%, rgba(255, 250, 205, 1) 100%);
+    box-shadow: 0 4px 8px 0 rgba(59, 59, 59, 0.2), 0 6px 20px 0 rgba(59, 59, 59, 0.2);
+  }
+
+.item-1 {  
+    grid-area: a;
 }
-.item2 {
-  grid-area: b;
-  background-color: rgb(255, 219, 87);
+
+.item-2 { 
+    grid-area: b;
+    border-radius: 10px;
+    background-color: rgba(255, 236, 148, 1);
+    background-image: linear-gradient(152deg, rgba(255, 236, 148, 1) 0%, rgba(253, 209, 102, 1) 100%);
+    box-shadow: 0 4px 8px 0 rgba(59, 59, 59, 0.2), 0 6px 20px 0 rgba(59, 59, 59, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.item3 {
-  grid-area: c;
-  background-color: rgb(246, 201, 36);
+.item-3 {
+    grid-area: c;
 }
-.item4 {
-  grid-area: d;
-  background-color: rgb(253, 214, 70);
+.item-4 {
+    grid-area: d;
 }
