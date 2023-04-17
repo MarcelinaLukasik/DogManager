@@ -1,60 +1,97 @@
 import { Outlet, Link } from "react-router-dom";
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 import { useEffect, useState } from "react";
-import '../../styles/main/layout.css';
+import "../../styles/main/layout.css";
 
 const Layout: React.FC = () => {
+  const [activeLink, setActiveLink] = useState("home");
+  const [scrolled, setScrolled] = useState(false);
 
-    const [activeLink, setActiveLink] = useState('home');
-    const [scrolled, setScrolled] = useState(false);
+  useEffect(() => scrollNavbar(), []);
 
+  const scrollNavbar = () => {
+    const onScroll = () => {
+      if (window.scrollY > 55) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
 
-    useEffect(() => scrollNavbar(), []);
+    window.addEventListener("scroll", onScroll);
 
-    const scrollNavbar = () => {
-        const onScroll = () => {
-            if (window.scrollY > 55) {
-                setScrolled(true);
-            } else {
-                setScrolled(false);
-            }
-        }
+    return () => window.removeEventListener("scroll", onScroll);
+  };
 
-        window.addEventListener("scroll", onScroll);
+  const onUpdateActiveLink = (link: string) => {
+    setActiveLink(link);
+  };
 
-        return () => window.removeEventListener("scroll", onScroll);
-    }
-
-    const onUpdateActiveLink = (link : string) => {
-        setActiveLink(link);
-    }
-
-    return (
-        <div>
+  return (
+    <div>
       <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="nav">             
-                <div>
-                    <Nav.Link as={Link} to="/" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'}
-                            onClick={() => onUpdateActiveLink('home')}>DogManager
-                    </Nav.Link>                                            
-                    <Nav.Link as={Link} to="/" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'}
-                        onClick={() => onUpdateActiveLink('home')}>Home
-                    </Nav.Link>                   
-                    <Nav.Link as={Link} to="/manager" className={activeLink === 'manager' ? 'active navbar-link' : 'navbar-link'} 
-                        onClick={() => onUpdateActiveLink('manager')}>Manager
-                    </Nav.Link>
-                    <Nav.Link as={Link} to="/tips" className={activeLink === 'tips' ? 'active navbar-link' : 'navbar-link'} 
-                            onClick={() => onUpdateActiveLink('tips')}>Tips
-                    </Nav.Link>
-                    <Nav.Link as={Link} to="/about" className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} 
-                            onClick={() => onUpdateActiveLink('about')}>About
-                    </Nav.Link>
-                </div>                      
-                </Nav>               
+            <Nav className="nav">
+              <div>
+                <Nav.Link
+                  as={Link}
+                  to="/"
+                  className={
+                    activeLink === "home" ? "active navbar-link" : "navbar-link"
+                  }
+                  onClick={() => onUpdateActiveLink("home")}
+                >
+                  DogManager
+                </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  to="/"
+                  className={
+                    activeLink === "home" ? "active navbar-link" : "navbar-link"
+                  }
+                  onClick={() => onUpdateActiveLink("home")}
+                >
+                  Home
+                </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  to="/manager"
+                  className={
+                    activeLink === "manager"
+                      ? "active navbar-link"
+                      : "navbar-link"
+                  }
+                  onClick={() => onUpdateActiveLink("manager")}
+                >
+                  Manager
+                </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  to="/tips"
+                  className={
+                    activeLink === "tips" ? "active navbar-link" : "navbar-link"
+                  }
+                  onClick={() => onUpdateActiveLink("tips")}
+                >
+                  Tips
+                </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  to="/about"
+                  className={
+                    activeLink === "about"
+                      ? "active navbar-link"
+                      : "navbar-link"
+                  }
+                  onClick={() => onUpdateActiveLink("about")}
+                >
+                  About
+                </Nav.Link>
+              </div>
+            </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
@@ -62,9 +99,7 @@ const Layout: React.FC = () => {
         <Outlet />
       </div>
     </div>
-    )
+  );
 };
-
-
 
 export default Layout;

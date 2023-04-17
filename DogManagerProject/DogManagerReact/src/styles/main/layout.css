@@ -73,7 +73,7 @@ button:hover {
   display: table;
 }
 
-[class*=col-] {
+[class*="col-"] {
   float: left;
   padding: 15px;
 }
@@ -127,9 +127,9 @@ button:hover {
 }
 
 .form {
-  display:grid;
+  display: grid;
   grid-template-columns: 80px 200px;
-  grid-gap:15px;
+  grid-gap: 15px;
   justify-content: center;
 }
 
@@ -137,12 +137,11 @@ button:hover {
   text-align: center;
   color: #ee8f00;
   font-weight: bolder;
-  font-size: 22px; 
+  font-size: 22px;
 }
 
 .form input:focus {
   outline-color: #f8a932;
- 
 }
 
 .form input {
@@ -165,7 +164,6 @@ button:hover {
 
 *::-webkit-scrollbar {
   width: 20px;
-  
 }
 
 *::-webkit-scrollbar-track {
@@ -179,4 +177,3 @@ button:hover {
   border: none;
 }
 
-/*# sourceMappingURL=layout.css.map */
