@@ -2,7 +2,7 @@ import "../../styles/main/layout.css";
 import "../../styles/main/panel.css";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import InfoCard from "./InfoCard";
+import SelectBreedCard from "./SelectBreedCard";
 
 const Start: React.FC = () => {
   const [imageUrl, setImageUrl] = useState<string>("");
@@ -77,7 +77,7 @@ const Start: React.FC = () => {
         <p>Choose your dog breed:</p>
         <div className="row">
           <div className="col-6">
-            <InfoCard
+            <SelectBreedCard
               info={{ breed, imageUrl }}
               functions={{ changeToNextBreed, changeToPreviousBreed }}
             />

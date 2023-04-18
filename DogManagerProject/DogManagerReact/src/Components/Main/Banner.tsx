@@ -13,19 +13,13 @@ const Banner: React.FC = () => {
         <div className="col-6">
           <div className="banner-message">
             <h1>Welcome!</h1>
-            <h3>
-              {MainInfo.Header}
-            </h3>
-
-            <p>
-              {MainInfo.Description}
-            </p>
+            <h3>{MainInfo.Header}</h3>
+            <p>{MainInfo.Description}</p>
           </div>
           <Nav.Link as={Link} to="/getStarted">
             <button>START</button>
           </Nav.Link>
         </div>
-
         <div className="col-5">
           <p>
             <img

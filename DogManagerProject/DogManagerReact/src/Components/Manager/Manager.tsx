@@ -43,7 +43,6 @@ const Manager: React.FC = () => {
       try {
         const result = await res.json();
         setAllBreedsInfo(result.data);
-        console.log(result.data);
         setLink(result.links.next);
       } catch (error) {
         console.log("invalid link");
@@ -107,6 +106,7 @@ const Manager: React.FC = () => {
                 breed={dogInfo.breed}
                 gender={dogInfo.gender}
                 weight={dogInfo.weight}
+                sterilized={dogInfo.sterilized}
               />
             </div>
           )}
