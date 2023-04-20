@@ -86,7 +86,7 @@ const Details: React.FC = () => {
           </div>
           <div className="row">
             <div className="col-12">
-              <button type={"submit"}>Done!</button>
+              <button type="submit">Done!</button>
             </div>
           </div>
         </form>
