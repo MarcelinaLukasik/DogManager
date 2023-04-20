@@ -70,13 +70,13 @@ const Layout: React.FC = () => {
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
-                  to="/tips"
+                  to="/shedules"
                   className={
-                    activeLink === "tips" ? "active navbar-link" : "navbar-link"
+                    activeLink === "shedules" ? "active navbar-link" : "navbar-link"
                   }
-                  onClick={() => onUpdateActiveLink("tips")}
+                  onClick={() => onUpdateActiveLink("shedules")}
                 >
-                  Tips
+                  Shedules
                 </Nav.Link>
                 <Nav.Link
                   as={Link}

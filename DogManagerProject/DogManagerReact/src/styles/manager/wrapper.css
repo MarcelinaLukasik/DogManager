@@ -1,10 +1,9 @@
 @media (min-width: 500px) {
-  .wrapper {
-    margin: auto;
+  .wrapper {  
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(500px, 1fr));
-    height: 700px;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(500px, 1fr));
+    height: 800px;
     gap: 10px;
     grid-template-areas:
       "a a b"

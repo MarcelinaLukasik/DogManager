@@ -73,8 +73,8 @@ const Start: React.FC = () => {
   return (
     <div className="content">
       <div className="panel">
-        <h3>Let's get started!</h3>
-        <p>Choose your dog breed:</p>
+        <h1>Let's get started!</h1>
+        <h2>Choose your dog breed:</h2>
         <div className="row">
           <div className="col-6">
             <SelectBreedCard
@@ -83,7 +83,8 @@ const Start: React.FC = () => {
             />
           </div>
           <div className="col-6">
-            <p>Or choose from list below:</p>
+            <div className="content">
+            <h2>Or choose from list below:</h2>
             <select onChange={selectChange}>
               <option value="">Select</option>
               {allBreeds.map((item, index) => (
@@ -92,6 +93,7 @@ const Start: React.FC = () => {
                 </option>
               ))}
             </select>
+            </div>
           </div>
         </div>
 
