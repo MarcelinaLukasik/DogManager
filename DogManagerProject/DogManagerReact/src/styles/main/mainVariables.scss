@@ -1,11 +1,15 @@
 $baseColor: #ffc432;
 $baseTextColor: #241e1e;
 $baseHoverColor: #f1f1f1;
+$baseGradient: linear-gradient(35deg, #ffc432, #f8ad21);
+$option: #f89b21;
 
 $colorsPalette: (
   "baseColor": $baseColor,
   "baseTextColor": $baseTextColor,
   "baseHoverColor": $baseHoverColor,
+  "baseGradient": $baseGradient,
+  "option": $option
 );
 
 $baseFont: "Fira Sans", sans-serif;

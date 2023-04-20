@@ -1,0 +1,27 @@
+select {
+  appearance: none;
+  border: 0;
+  outline: 0;
+  font-size: 20px;
+  font-weight: bold;
+  width: 20em;
+  height: 3em;
+  padding: 0 4em 0 1em;
+  background: linear-gradient(35deg, #ffc432, #f8ad21);
+  color: #241e1e;
+  border-radius: 0.25em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+select option {
+  color: inherit;
+  background-color: #f89b21;
+}
+select:focus {
+  outline: none;
+}
+select::-ms-expand {
+  display: none;
+}
+
+/*# sourceMappingURL=select.css.map */

@@ -10,3 +10,14 @@
   height: auto;
   overflow-wrap: normal;
 }
+
+.image-container {
+  display: block;
+  justify-content: center;
+}
+
+.panel-image {
+  max-width: 600px;
+}
+
+/*# sourceMappingURL=panel.css.map */

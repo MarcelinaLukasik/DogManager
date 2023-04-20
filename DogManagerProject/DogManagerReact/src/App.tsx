@@ -15,6 +15,8 @@ function App() {
           <Route path="/manager" element={<Manager />} />
           <Route path="/getStarted" element={<Start />} />
           <Route path="/getStarted/Details" element={<Details />} />
+          <Route path="/about" element={<Home />} />
+          <Route path="/shedules" element={<Home />} />
         </Route>
       </Routes>
     </BrowserRouter>

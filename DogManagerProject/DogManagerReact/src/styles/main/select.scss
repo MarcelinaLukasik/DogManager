@@ -1,0 +1,28 @@
+
+@import "mainVariables.scss";
+
+select {
+  appearance: none;
+  border: 0;
+  outline: 0;
+  font-size: 20px;
+  font-weight: bold;
+  width: 20em;
+  height: 3em;
+  padding: 0 4em 0 1em;
+  background: $baseGradient;
+  color: $baseTextColor;
+  border-radius: 0.25em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  option {
+    color: inherit;
+    background-color: $option;
+  }
+  &:focus {
+    outline: none;
+  }
+  &::-ms-expand {
+    display: none;
+  }
+}

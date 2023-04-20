@@ -1,5 +1,6 @@
 import "../../styles/main/banner.css";
 import "../../styles/main/layout.css";
+import "../../styles/main/select.css";
 import "../../styles/manager/wrapper.css";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";

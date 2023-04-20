@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { IDogData } from "../Interfaces/IDogData";
 import { BasicDogInfo, AdditionalDogInfo } from "../../Enums/DogInfo";
+import businessDogImage from "../../images/cute-little-dog-impersonating-business-person.jpg";
 
 const Details: React.FC = () => {
   const location = useLocation();
@@ -31,11 +32,20 @@ const Details: React.FC = () => {
 
   return (
     <div className="content">
-      <div className="panel">
-        <h2>Your pet ({dogInfo.breed}) info:</h2>
-        <form onSubmit={handleInfoSubmit}>
-          <div className="row">
-            <div className="col-12">
+      <div className="row panel">
+        <h1>Your pet ({dogInfo.breed}) info:</h1>
+        <div className="col-5">
+          <div className="image-container">
+            <img
+              className="panel-image"
+              src={businessDogImage}
+              alt="businessDogImage"
+            />
+          </div>
+        </div>
+        <div className="col-7">
+          <div className="panel">
+            <form onSubmit={handleInfoSubmit}>
               {(
                 Object.keys(BasicDogInfo) as Array<keyof typeof BasicDogInfo>
               ).map((item, i) => (
@@ -53,13 +63,14 @@ const Details: React.FC = () => {
               <div className="formElement">
                 <label htmlFor={AdditionalDogInfo.sterilized}>
                   {AdditionalDogInfo.sterilized}
-                  <input
-                    type="checkbox"
-                    value="yes"
-                    name={AdditionalDogInfo.sterilized}
-                    onChange={handleChange}
-                  />
                 </label>
+                <input
+                  className="checkmark"
+                  type="checkbox"
+                  value="yes"
+                  name={AdditionalDogInfo.sterilized}
+                  onChange={handleChange}
+                />
               </div>
               <h2>{AdditionalDogInfo.gender}</h2>
               <div className="formElement radio">
@@ -82,14 +93,11 @@ const Details: React.FC = () => {
                   />
                 </label>
               </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-12">
+
               <button type="submit">Done!</button>
-            </div>
+            </form>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   );

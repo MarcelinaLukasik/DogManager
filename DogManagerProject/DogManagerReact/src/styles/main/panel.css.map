@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["panel.scss","mainVariables.scss"],"names":[],"mappings":"AAEA;EACI;EACA;EACA,eCQS;EDPT,YCQQ;EDPR;EACA;EACA;EACA;EACA;EACA;EACA","file":"panel.css"}
+{"version":3,"sourceRoot":"","sources":["panel.scss","mainVariables.scss"],"names":[],"mappings":"AAEA;EACE;EACA;EACA,eCWW;EDVX,YCWU;EDVV;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;;;AAGF;EACI","file":"panel.css"}
