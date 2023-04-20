@@ -5,4 +5,5 @@ export interface IDogData {
   imageUrl?: string;
   gender: string;
   weight: number;
+  sterilized: boolean
 }

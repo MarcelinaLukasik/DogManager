@@ -4,7 +4,7 @@ import { ISimilarBreeds } from "../Interfaces/IBreedInfo";
 
 const SimilarBreeds = (props: ISimilarBreeds) => {
   const uniqueBreeds = props.similarBreeds.filter(function (elem, pos) {
-    return props.similarBreeds.indexOf(elem) == pos;
+    return props.similarBreeds.indexOf(elem) === pos;
   });
   return (
     <div>

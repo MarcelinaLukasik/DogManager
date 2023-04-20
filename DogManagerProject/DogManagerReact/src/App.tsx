@@ -3,7 +3,7 @@ import Home from "./Components/Main/Home";
 import Start from "./Components/Main/Start";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Components/Main/Layout";
-import Details from "./Components/Main/Details";
+import Details from "./Components/Main/AddDogForm";
 import Manager from "./Components/Manager/Manager";
 
 function App() {

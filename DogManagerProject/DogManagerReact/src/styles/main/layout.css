@@ -125,29 +125,32 @@ button:hover {
   width: 100%;
 }
 
-.form {
+.formElement {
   display: grid;
-  grid-template-columns: 80px 200px;
-  grid-gap: 15px;
-  justify-content: center;
+  grid-template-columns: max-content max-content;
+  justify-content: space-between;
+  width: 30%;
+  padding: 10px;
+  margin: 0 auto;
 }
-
-.form label {
+.formElement label {
   text-align: center;
   color: #ee8f00;
   font-weight: bolder;
   font-size: 22px;
 }
-
-.form input:focus {
-  outline-color: #f8a932;
-}
-
-.form input {
-  padding: 8px 10px;
+.formElement input {
+  padding: 8px 25px;
   border-radius: 5px;
   border: none;
   background-color: #ececec;
+}
+.formElement input:focus {
+  outline-color: #f8a932;
+}
+.radio {
+  padding: 8px 60px;
+  width: 25%;
 }
 
 .scrollable-list {
@@ -175,3 +178,5 @@ button:hover {
   border-radius: 5px;
   border: none;
 }
+
+/*# sourceMappingURL=layout.css.map */
