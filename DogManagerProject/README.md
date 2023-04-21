@@ -7,17 +7,17 @@ DogManager is a web application designed to help people keep track of their dogs
 
 **Client:** React, TypeScript, HTML, SCSS
 
-**ARCHITECTURE:**  WEB API
+**External APIs:** dog.ceo, dogapi.dog
 
 # Page Screenshots
 
-![home](Preview/homePage.jpg)
+![home](https://github.com/MarcelinaLukasik/DogManager/blob/d2b2c5be3efea7d323612ecf190a52e8e7fa3851/DogManagerProject/Preview/homePage.JPG)
 
-![mainForm](Preview/mainForm.jpg)
+![mainForm](https://github.com/MarcelinaLukasik/DogManager/blob/d2b2c5be3efea7d323612ecf190a52e8e7fa3851/DogManagerProject/Preview/mainForm.JPG)
 
-![dogBreedsPanel](Preview/dogBreedsPanel.jpg)
+![dogBreedsPanel](https://github.com/MarcelinaLukasik/DogManager/blob/d2b2c5be3efea7d323612ecf190a52e8e7fa3851/DogManagerProject/Preview/dogBreedsPanel.JPG)
 
-![manager](Preview/manager.jpg)
+![manager](https://github.com/MarcelinaLukasik/DogManager/blob/d2b2c5be3efea7d323612ecf190a52e8e7fa3851/DogManagerProject/Preview/manager.JPG)
 
 
 ## Author
